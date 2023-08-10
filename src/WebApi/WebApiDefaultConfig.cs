@@ -5,7 +5,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 namespace Yld.GamingApi.WebApi;
 
 /*
- * Is is the default Web Api configuration.
+ * It is the default Web Api configuration.
  * Please DO NOT change this code!!!
  */
 public static class WebApiDefaultConfig
