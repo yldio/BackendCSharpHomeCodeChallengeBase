@@ -4,7 +4,7 @@ Yld Home Code Challenge (Backend C#)
 
 This is the skeleton project that you must use for the Home Code Challenge
 
-The target framework is .NET 6, uses Swagger (https://swagger.io/), and has Nullables and NETAnalyzers enabled
+The target framework is .NET 8, uses Swagger (https://swagger.io/), and has Nullables and NETAnalyzers enabled
 
 Feel free to structure the rest as you think it's better
 
