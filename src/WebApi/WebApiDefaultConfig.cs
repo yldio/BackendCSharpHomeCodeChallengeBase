@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Rewrite;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Yld.GamingApi.WebApi;
@@ -35,7 +35,10 @@ public static class WebApiDefaultConfig
             c.DocExpansion(DocExpansion.List);
         });
 
-        app.UseHttpsRedirection();
+        if (app.ApplicationServices.GetRequiredService<IHostEnvironment>().IsProduction())
+        {
+            app.UseHttpsRedirection();
+        }
 
         app.UseRouting();
 

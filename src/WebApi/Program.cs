@@ -1,16 +1,13 @@
-﻿using Microsoft.AspNetCore;
+﻿using Yld.GamingApi.WebApi;
 
-namespace Yld.GamingApi.WebApi;
+var builder = WebApplication.CreateBuilder(args);
 
-public static class Program
-{
-    public static void Main(string[] args)
-    {
-        CreateWebHostBuilder(args).Build().Run();
-    }
+// Add services
+builder.Services.AddDefaultServices();
 
-    public static IWebHostBuilder CreateWebHostBuilder(string[] args)
-    {
-        return WebHost.CreateDefaultBuilder(args).UseStartup<Startup>();
-    }
-}
+var app = builder.Build();
+
+// Configure middleware
+app.UseDefaultAppConfig();
+
+app.Run();
